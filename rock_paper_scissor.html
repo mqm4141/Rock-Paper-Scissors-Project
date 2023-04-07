@@ -8,9 +8,9 @@
 </head>
 <body>
     <script>
-        function getComputerChoice() {
-            var ComputerChoiceArray = ['Rock', 'Paper', 'Scissors'];
-            return ComputerChoice = ComputerChoiceArray[math.floor(math.random()*ComputerChoiceArray.lenth)];
+        var ComputerChoiceArray = ['Rock', 'Paper', 'Scissors'];
+        function getComputerChoice(arr) {
+            return ComputerChoice = arr[Math.floor(Math.random()*arr.lenth)];
         }
         console.log(getComputerChoice())
     </script>
