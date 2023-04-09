@@ -8,13 +8,43 @@
 </head>
 <body>
     <script>
-        var ComputerChoiceArray = ["Rock", "Paper", "Scissors"];
+        var ComputerChoiceArray = ["rock", "paper", "scissors"];
 
         function getComputerChoice(arr) {
             var ComputerChoice = arr[(Math.floor(Math.random()*arr.length))];
             return ComputerChoice;
         }
-        console.log(getComputerChoice(ComputerChoiceArray));
+        var userinput1 = prompt("rock, paper, or scissors?" );
+
+        var userinput = userinput1.toLowerCase();
+
+        function game(ui, cc) {
+            if (ui === "rock" && cc === "paper") {
+                return "You Lose!";
+            }
+            else if (ui === "rock" && cc === "scissors") {
+                return "You Win!";
+            }
+            else if (ui === "paper" && cc === "rock") {
+                return "You Win!";
+            }
+            else if (ui === "paper" && cc === "scissors") {
+                return "You Lose!";
+            }
+            else if (ui === "scissors" && cc === "paper") {
+                return "You Win!";
+            }
+            else if (ui === "scissors" && cc === "rock") {
+                return "You Lose!";
+            }
+            else if (ui === cc) {
+                return "You Tied!";
+            }
+            else {
+                return "Wrong Input!"
+            }
+        }
+        console.log(game(userinput, getComputerChoice(ComputerChoiceArray)));
     </script>
 </body>
 </html>
